@@ -32,7 +32,8 @@ CREATE TABLE expenses(id INT PRIMARY KEY,name VARCHAR(1024) NOT NULL, cost DECIM
 `npm install`
 
 2) Inside dbupdater.js edit the connection variable to point to your MySql Server that you've just installed: 
-ex:
+
+```
 const connection = sql.createConnection({
     host : '127.0.0.1',
     port : '3306',
@@ -40,6 +41,7 @@ const connection = sql.createConnection({
     password : '123',
     database : 'expensedb'
 });
+```
 
 Where Host, Port, User, Password are the ip+port and credentials for your MySql Server
 database : 'expensedb' can be kept as is since this is the name of our created database from our previous queries
@@ -57,7 +59,7 @@ database : 'expensedb' can be kept as is since this is the name of our created d
 
 `npm start`
 
-3) Visit http://localhost:3000/ to checkout the expense tracker :)
+3) Visit http://localhost:3000/ to check out the expense tracker :)
 
 # TroubleShooting #
 By default the backend server listens on port 5000 and the front end server is hosted on port 3000
