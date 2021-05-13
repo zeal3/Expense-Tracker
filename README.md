@@ -64,15 +64,18 @@ By default the backend server listens on port 5000 and the front end server is h
 
 ## Frontend configuration ##
 In the folder "expense-tracker" inside .env verify the following line is the backends address
+
  `REACT_APP_SERVER = http://localhost:5000`
 
 ## Backend configuration ##
 In server.js 
 
 you can modify the port that the backend listens to:
+
 `const port = <Enter port number>;`
 
 Ensure the correct url to the front end for cors from the line:
+
 `resp.setHeader('Access-Control-Allow-Origin','http://localhost:3000');`
 
 In dbupdater.js
@@ -81,7 +84,9 @@ Verify the connection variable points to your MySql Server
 
 ## Database Verification ##
 Verify there is a database named 'expensedb' using MySql Workbench
+
 Verify there is a table named 'expenses' created from the past command:
-CREATE TABLE expenses(id INT PRIMARY KEY,name VARCHAR(1024) NOT NULL, cost DECIMAL(10,2) NOT NULL, category VARCHAR(30) NOT NULL);
+
+`CREATE TABLE expenses(id INT PRIMARY KEY,name VARCHAR(1024) NOT NULL, cost DECIMAL(10,2) NOT NULL, category VARCHAR(30) NOT NULL);`
 
 
