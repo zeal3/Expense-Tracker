@@ -46,7 +46,15 @@ const connection = sql.createConnection({
 Where Host, Port, User, Password are the ip+port and credentials for your MySql Server
 database : 'expensedb' can be kept as is since this is the name of our created database from our previous queries
 
-3) Start the backend server
+3) Install Mysql package
+
+`npm install mysql --save'
+
+4) Install Express package
+
+`npm install express --save`
+
+5) Start the backend server
 
 `node server.js`
 
