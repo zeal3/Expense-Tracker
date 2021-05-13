@@ -1,10 +1,11 @@
-Ennsure you have node.js installed before continuing 
+# Cloning #
+Ensure you have node.js installed before continuing 
 
 1) Clone the repository
 
-git clone https://github.com/zeal3/Expense-Tracker.git
+`git clone https://github.com/zeal3/Expense-Tracker.git`
 
-#MySql Database Setup
+# MySql Database Setup #
 
 2) Download and install MySql
 
@@ -18,15 +19,17 @@ git clone https://github.com/zeal3/Expense-Tracker.git
 
 7) Run the following set of queries to create and setup the database for our backend to use:
 
+```
 CREATE DATABASE expensedb;
 use expensedb;
 CREATE TABLE expenses(id INT PRIMARY KEY,name VARCHAR(1024) NOT NULL, cost DECIMAL(10,2) NOT NULL, category VARCHAR(30) NOT NULL);
+```
 
-#Backend Setup
+# Backend Setup #
 
 1) Inside the backend folder "expense-tracker-backend" run the following command in a terminal/cmd:
 
-npm install
+`npm install`
 
 2) Inside dbupdater.js edit the connection variable to point to your MySql Server that you've just installed: 
 ex:
@@ -43,40 +46,40 @@ database : 'expensedb' can be kept as is since this is the name of our created d
 
 3) Start the backend server
 
-node server.js
+`node server.js`
 
-#Frontend Setup
+# Frontend Setup #
 1) Inside the frontend folder "expense-tracker" run the following command in a terminal/cmd:
 
-npm install
+`npm install`
 
 2) Start the front end client
 
-npm start
+`npm start`
 
 3) Visit http://localhost:3000/ to checkout the expense tracker :)
 
-#TroubleShooting
+# TroubleShooting #
 By default the backend server listens on port 5000 and the front end server is hosted on port 3000
 
-##Frontend configuration
+## Frontend configuration ##
 In the folder "expense-tracker" inside .env verify the following line is the backends address
- REACT_APP_SERVER = http://localhost:5000
+ `REACT_APP_SERVER = http://localhost:5000`
 
-##Backend configuration
+## Backend configuration ##
 In server.js 
 
 you can modify the port that the backend listens to:
-const port = <Enter port number>;
+`const port = <Enter port number>;`
 
 Ensure the correct url to the front end for cors from the line:
-resp.setHeader('Access-Control-Allow-Origin','http://localhost:3000');
+`resp.setHeader('Access-Control-Allow-Origin','http://localhost:3000');`
 
 In dbupdater.js
 
 Verify the connection variable points to your MySql Server
 
-#Database Verification
+## Database Verification ##
 Verify there is a database named 'expensedb' using MySql Workbench
 Verify there is a table named 'expenses' created from the past command:
 CREATE TABLE expenses(id INT PRIMARY KEY,name VARCHAR(1024) NOT NULL, cost DECIMAL(10,2) NOT NULL, category VARCHAR(30) NOT NULL);
