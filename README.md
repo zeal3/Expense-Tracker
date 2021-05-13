@@ -48,7 +48,7 @@ database : 'expensedb' can be kept as is since this is the name of our created d
 
 3) Install Mysql package
 
-`npm install mysql --save'
+`npm install mysql --save`
 
 4) Install Express package
 
